@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
           ]
 
         const getProduct = new Promise ((res, rej) => {
-            const product = productos.find((produ) => produ.id === 1)
+            const product = productos.find((produ) => produ.id === 5)
             setTimeout(() => {
                 res(product)
             }, 2000)

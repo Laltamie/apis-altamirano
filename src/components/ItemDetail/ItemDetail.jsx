@@ -1,12 +1,16 @@
 import React from "react";
+import "../ItemDetail/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount";
 
+
+const images = require.context('../../assets/images/', true);
 
 const ItemDetail = ({item}) => {
 
     return (
+        <>
         <div key={item.id} className="container">
-            <img src={item.img} className="card-img-top" alt={item.name} />
+            <img src={images(`${ item.img }`)} className="card-img-top card-ItemD" width="150px" alt={item.name} />
             <div>
                 <h2>{item.name}</h2>
                 <p>
@@ -14,10 +18,11 @@ const ItemDetail = ({item}) => {
                 </p>
                 <h3>$ {item.precio}</h3>
             </div>
-            <div>
+            <div className="contenedor-contador">
                 <ItemCount stock={5} inicial={1} agregar={0}/>
             </div>
         </div>
+        </>
     )
 };
 
