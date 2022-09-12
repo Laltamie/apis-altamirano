@@ -31,6 +31,7 @@ const ItemDetailContainer = () => {
         getProduct.then((info) => {
             setItem(info)
         });
+
     }, []);
 
     return (
