@@ -2,15 +2,12 @@ import React from "react";
 import "../ItemDetail/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount";
 
-
-// const images = require.context('../../assets/images/', true);
-
 const ItemDetail = ({item}) => {
 
     return (
         <>
         <div key={item.id} className="container">
-            {/* <img src={images(`${ item.img }`)} className="card-img-top card-ItemD" width="150px" alt={item.name} /> */}
+            <img src={"/images/" - item?.img - ".jpg"} className="card-img-top card-ItemD" width="150px" alt={item.name} />
             <div>
                 <h2>{item.name}</h2>
                 <p>
